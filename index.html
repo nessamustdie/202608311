@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Página</title>
+    <style>
+        /* Configurações gerais do site fofuxo azul */
+        body {
+            background-color: #edf7ff; /* Fundo azul bem clarinho */
+            color: #3a4750; /* Cor do texto em um tom cinza azulado suave */
+            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Fredoka One', sans-serif; /* Fontes arredondadas */
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Caixa principal que guarda o conteúdo */
+        .container {
+            background-color: #ffffff; /* Fundo branco para destacar */
+            border: 4px dashed #b3dcff; /* Borda tracejada azul */
+            border-radius: 20px; /* Bordas bem arredondadas */
+            padding: 30px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 8px 16px rgba(179, 220, 255, 0.4); /* Sombra suave azul */
+            text-align: center;
+        }
+
+        /* Títulos */
+        h1 {
+            color: #3399ff; /* Azul mais vivo e alegre */
+            font-size: 2rem;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 2px #cce6ff;
+        }
+
+        h2 {
+            color: #5cb3ff; /* Tom médio de azul */
+            border-bottom: 2px dotted #b3dcff;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        /* Parágrafos e textos */
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Lista de artistas favoritos */
+        .lista-artistas {
+            background-color: #f0f8ff;
+            border: 2px solid #cce6ff;
+            border-radius: 15px;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: left;
+            list-style-type: none;
+        }
+
+        .lista-artistas li {
+            font-size: 1.2rem;
+            color: #0066cc;
+            font-weight: bold;
+            margin: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        /* Ícones fofos antes dos nomes */
+        .lista-artistas li::before {
+            content: "✨";
+            position: absolute;
+            left: 5px;
+        }
+
+        /* Grade para organizar as imagens lado a lado */
+        .galeria-imagens {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        /* Quando a tela for maior, as fotos do Queen e Beatles ficam lado a lado */
+        @media (min-width: 480px) {
+            .galeria-imagens {
+                grid-template-columns: 1fr 1fr;
+            }
+            .espaco-imagem.grande {
+                grid-column: span 2; /* A foto do Bowie fica grande embaixo */
+            }
+        }
+
+        /* Caixinhas de foto pontilhadas */
+        .espaco-imagem {
+            background-color: #edf7ff;
+            border: 3px dashed #80c0ff;
+            border-radius: 12px;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #3399ff;
+            font-weight: bold;
+            font-size: 0.9rem;
+            padding: 10px;
+            box-sizing: border-box;
+            overflow: hidden; /* Garante que a foto não morda as bordas da caixa */
+        }
+
+        /* Estilo fofo para ajustar as fotos que você mandou */
+        .espaco-imagem img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Recorta e centraliza a imagem perfeitamente na caixinha */
+            border-radius: 8px;
+        }
+
+        /* Área de identificação */
+        .dados-aluno {
+            text-align: left;
+            background-color: #fbfdff;
+            padding: 15px;
+            border-radius: 12px;
+            border-left: 5px solid #80c0ff;
+            display: inline-block;
+            min-width: 250px;
+        }
+
+        .dados-aluno p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Meu trabalho de programação</h1>
+
+        <p>Os melhores artistas e bandas de todos os tempos:</p>
+        
+        <ul class="lista-artistas">
+            <li>👑 Queen</li>
+            <li>🍏 The Beatles</li>
+            <li>⚡ David Bowie</li>
+        </ul>
+
+        <h2>Galeria de Fotos</h2>
+        <!-- Três espaços fofos preenchidos com as fotos enviadas -->
+        <div class="galeria-imagens">
+            <div class="espaco-imagem">
+                <img src="queen.png" alt="Banda Queen com leques e borboletas">
+            </div>
+            <div class="espaco-imagem">
+                <img src="beatles.png" alt="The Beatles com as roupas coloridas do Sgt. Pepper">
+            </div>
+            <div class="espaco-imagem grande">
+                <img src="bowie.png" alt="David Bowie na era Ziggy Stardust">
+            </div>
+        </div>
+
+        <h2>Identificação</h2>
+        <div class="dados-aluno">
+            <p><strong>Nome:</strong> Wanessa Ozório Ortiz</p>
+            <p><strong>Número:</strong> 33</p>
+            <p><strong>Turma:</strong> 1⁰ A</p>
+        </div>
+    </div>
+
+</body>
+</html>
